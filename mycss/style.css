@@ -1,0 +1,245 @@
+:root {
+    --primary: #007e3f;
+    --green: #33d1cc;
+    /* --primary: #ff3158; */
+    /* --section: #ffc400; */
+    --section: #eff7fa;
+    --secondary: #00a44e;
+    --gray: #666a6d;
+}
+
+nav {
+    background-color: white;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--green);
+}
+
+.navbar .navbar-toggler {
+    box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--green);
+}
+
+.navbar .navbar-toggler svg {
+    color: white;
+}
+
+.navbar .search {
+    color: white
+}
+
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
+    display: none;
+}
+
+.landing {
+    /* background-color: var(--primary); */
+    height: calc(100vh - 72px);
+    color: white;
+ position: relative;
+}
+/* .landing::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background-color: var(--gray);
+} */
+.landing::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    /* background-color: var(--primary); */
+    background: linear-gradient(45deg, var(--primary), white, var(--green));
+}
+
+.main-btn {
+    background-color: var(--primary);
+    color: var(--section);
+    font-weight: bold;
+    padding: .5rem 1rem;
+}
+
+.main-btn:hover {
+    background-color: var(--green);
+    color: white;
+
+}
+
+.main-title::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: var(--green);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.features .feat .icon-holder {
+    height: 200px;
+}
+
+.features .feat .icon-holder .number {
+    height: 100%;
+    color: var(--section);
+}
+
+.features .feat .icon-holder svg {
+    color: var(--green);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.features .feat h4 {
+    color: var(--green);
+}
+
+.our-work {
+    background-color: var(--section);
+}
+
+.our-work ul li {
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+.our-work ul li.active {
+    background-color: var(--primary);
+    color: var(--section);
+}
+
+.our-work ul li:not(.active):hover {
+    color: var(--primary);
+}
+
+.our-work .work-holder {
+    overflow: hidden;
+    border: 5px solid white;
+}
+
+.our-work .work-holder::before {
+    content: attr(data-work);
+    width: 100%;
+    height: 100%;
+    background-color: var(--green);
+    color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    transform: translateX(-100%);
+    opacity: .8;
+    transition: .3s;
+}
+
+.our-work .work-holder:hover::before {
+    transform: translateX(0);
+}
+
+.about .main-title+p {
+    max-width: 500px;
+}
+
+.our-work {
+    background-color: var(--section);
+}
+
+.our-work h2 {
+    color: var(--section);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.our-work .box h3 {
+    background-color: var(--green);
+    color: white
+}
+
+.start-project {
+    background-color: var(--section);
+}
+
+.start-project h3 {
+    /* color: white */
+}
+
+.subscribe {
+    background-color: var(--section);
+}
+
+.subscribe input[type="email"] {
+    height: 50px;
+    border-color: transparent transparent white transparent;
+    background-color: transparent;
+    font-weight: bold;
+    padding: 1rem;
+    flex-grow: 1;
+    color: var(--primary);
+    outline-color: var(--green);
+}
+
+.subscribe input[type="email"]::placeholder {
+    color: var(--primary)
+}
+
+.subscribe input[type="submit"] {
+    color: var(--section);
+    background-color: var(--primary);
+    border: none;
+}
+
+.contact {
+    background-color: var(--primary);
+}
+
+.contact h3 {
+    color: white
+}
+
+.contact span:first-of-type {
+    color: var(--green);
+}
+
+.contact span:last-of-type {
+    color: var(--section);
+}
+
+.facebook {
+    background-color: #1877f2
+}
+
+.twitter {
+
+    background-color: #1da1f2
+}
+
+.linkedin {
+    background-color: #0070b5
+}
+
+.youtube {
+    background-color: #ff0000
+}
